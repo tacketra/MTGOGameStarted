@@ -14,8 +14,8 @@ at "MTGOGameStarted\StartDay\ConsoleApplication1\bin\Debug\". The application sh
 tray as an M icon. Right-click that icon and click settings. Here were are going to set up our email settings. We 
 need to set up a email address, a passowrd and Outgoing SMTP mail settings. You should be able to use any email 
 service that supports this but I chose to use gmail. See setup steps for gmail below
-  -> login to your online gmail mailbox \n
-  ->  From your gmail mailbox click settings \n
+  -> login to your online gmail mailbox 
+  ->  From your gmail mailbox click settings 
   -> "forwarding and POP/IMAP" tab 
   -> click the "configuration instructions" hyperlink at the bottom 
   -> click "I want to enable IMAP" radio button

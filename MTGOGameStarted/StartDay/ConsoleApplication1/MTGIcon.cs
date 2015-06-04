@@ -9,13 +9,14 @@ using System.Runtime.InteropServices;
 using System.Net.Mail;
 using System.Drawing;
 
-namespace ConsoleApplication1
+namespace MtgoGame
 {
     class MTGIcon : Form
     {
         private NotifyIcon trayIcon;
         private ContextMenu trayMenu;
 
+        /* creates the mtgo icon for this tray application*/
         public MTGIcon()
         {
             trayIcon = new NotifyIcon();
@@ -48,6 +49,7 @@ namespace ConsoleApplication1
             //Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new SettingsForm());
 
+            /*settings view on the mtgo icon drop down*/
             SettingsForm settingsForm = new SettingsForm();
             settingsForm.Show();
         }

@@ -13,7 +13,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-namespace ConsoleApplication1
+namespace MtgoGame
 {
     partial class SettingsForm
     {
@@ -61,7 +61,7 @@ namespace ConsoleApplication1
             this.InputBoxEmail.Name = "InputBoxEmail";
             this.InputBoxEmail.Size = new System.Drawing.Size(140, 20);
             this.InputBoxEmail.TabIndex = 0;
-            this.InputBoxEmail.Text = Properties.Settings.Default.Email;
+            this.InputBoxEmail.Text = ConsoleApplication1.Properties.Settings.Default.Email;
             // 
             // InputBoxPassword
             // 
@@ -69,7 +69,7 @@ namespace ConsoleApplication1
             this.InputBoxPassword.Name = "InputBoxPassword";
             this.InputBoxPassword.Size = new System.Drawing.Size(140, 20);
             this.InputBoxPassword.TabIndex = 1;
-            this.InputBoxPassword.Text = Properties.Settings.Default.Password;
+            this.InputBoxPassword.Text = ConsoleApplication1.Properties.Settings.Default.Password;
             // 
             // InputBoxHost
             // 
@@ -77,7 +77,7 @@ namespace ConsoleApplication1
             this.InputBoxHost.Name = "InputBoxHost";
             this.InputBoxHost.Size = new System.Drawing.Size(100, 20);
             this.InputBoxHost.TabIndex = 2;
-            this.InputBoxHost.Text = Properties.Settings.Default.Host;
+            this.InputBoxHost.Text = ConsoleApplication1.Properties.Settings.Default.Host;
             // 
             // InputBoxPort
             // 
@@ -85,7 +85,7 @@ namespace ConsoleApplication1
             this.InputBoxPort.Name = "InputBoxPort";
             this.InputBoxPort.Size = new System.Drawing.Size(100, 20);
             this.InputBoxPort.TabIndex = 3;
-            this.InputBoxPort.Text = Properties.Settings.Default.Port;
+            this.InputBoxPort.Text = ConsoleApplication1.Properties.Settings.Default.Port;
             // 
             // ButtonSave
             // 
@@ -173,12 +173,12 @@ namespace ConsoleApplication1
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            
-            Properties.Settings.Default.Email = this.InputBoxEmail.Text;
-            Properties.Settings.Default.Password = this.InputBoxPassword.Text;
-            Properties.Settings.Default.Host = this.InputBoxHost.Text;
-            Properties.Settings.Default.Port = this.InputBoxPort.Text;
-            Properties.Settings.Default.Save();
+
+            ConsoleApplication1.Properties.Settings.Default.Email = this.InputBoxEmail.Text;
+            ConsoleApplication1.Properties.Settings.Default.Password = this.InputBoxPassword.Text;
+            ConsoleApplication1.Properties.Settings.Default.Host = this.InputBoxHost.Text;
+            ConsoleApplication1.Properties.Settings.Default.Port = this.InputBoxPort.Text;
+            ConsoleApplication1.Properties.Settings.Default.Save();
 
         }
 

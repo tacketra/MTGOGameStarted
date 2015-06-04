@@ -8,8 +8,9 @@ using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Net.Mail;
 
-namespace ConsoleApplication1
+namespace MtgoGame
 {
+    /*reads from the windows events and looks for game started messages from mtgo, also instantiates the icon for this application*/
     class NameChangeTracker
     {
         delegate void WinEventDelegate(IntPtr hWinEventHook, uint eventType,

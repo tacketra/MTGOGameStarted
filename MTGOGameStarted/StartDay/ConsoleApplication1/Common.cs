@@ -5,7 +5,7 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication1
+namespace MtgoGame
 {
 
     /* static functions that any class may need */
@@ -14,15 +14,15 @@ namespace ConsoleApplication1
 
         public static void SendEmail(string subject, string body)
         {
-            MailMessage mail = new MailMessage(Properties.Settings.Default.Email, Properties.Settings.Default.Email);
+            MailMessage mail = new MailMessage(ConsoleApplication1.Properties.Settings.Default.Email, ConsoleApplication1.Properties.Settings.Default.Email);
             SmtpClient client = new SmtpClient();
-            client.Port = Int32.Parse(Properties.Settings.Default.Port); // 587
+            client.Port = Int32.Parse(ConsoleApplication1.Properties.Settings.Default.Port); // 587
             client.DeliveryMethod = SmtpDeliveryMethod.Network;
             client.UseDefaultCredentials = false;
-            client.Host = Properties.Settings.Default.Host;//"smtp.gmail.com"
+            client.Host = ConsoleApplication1.Properties.Settings.Default.Host;//"smtp.gmail.com"
             mail.Subject = subject;
             mail.Body = body;
-            client.Credentials = new System.Net.NetworkCredential(Properties.Settings.Default.Email, Properties.Settings.Default.Password);
+            client.Credentials = new System.Net.NetworkCredential(ConsoleApplication1.Properties.Settings.Default.Email, ConsoleApplication1.Properties.Settings.Default.Password);
             client.EnableSsl = true;
 
             client.Send(mail);

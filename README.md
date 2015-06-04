@@ -14,15 +14,15 @@ at "MTGOGameStarted\StartDay\ConsoleApplication1\bin\Debug\". The application sh
 tray as an M icon. Right-click that icon and click settings. Here were are going to set up our email settings. We 
 need to set up a email address, a passowrd and Outgoing SMTP mail settings. You should be able to use any email 
 service that supports this but I chose to use gmail. See setup steps for gmail below
-  -login to your online gmail mailbox
-  - From your gmail mailbox click settings
-  -"forwarding and POP/IMAP" tab 
-  -click the "configuration instructions" hyperlink at the bottom 
-  -click "I want to enable IMAP" radio button
-  -click the "other" radio button for the client selection
-  -Under "Outgoing Mail (SMTP) Server - Requires TLS" it should list the host (currently smtp.gmail.com) and the port
-  -grab the host and port from this section
-  -input your email, password as well as the host and port information you just grabbed into seetings and click save
+  -> login to your online gmail mailbox \n
+  ->  From your gmail mailbox click settings \n
+  -> "forwarding and POP/IMAP" tab 
+  -> click the "configuration instructions" hyperlink at the bottom 
+  -> click "I want to enable IMAP" radio button
+  -> click the "other" radio button for the client selection
+  -> Under "Outgoing Mail (SMTP) Server - Requires TLS" it should list the host (currently smtp.gmail.com) and the port
+  -> grab the host and port from this section
+  -> input your email, password as well as the host and port information you just grabbed into seetings and click save
   
 Before using this application with an actual tournament you can test it out by joining a practice room game just
 to be safe. 

@@ -40,7 +40,6 @@ namespace MtgoGame
         [STAThread]
         public static void Main()
         {
-            // Common.SendEmail("MTGO game started", "Your MTGO Game just started!");
             IntPtr hhook = SetWinEventHook(EVENT_OBJECT_NAMECHANGE, EVENT_OBJECT_NAMECHANGE, IntPtr.Zero, procDelegate, 0, 0, WINEVENT_OUTOFCONTEXT);
             // UnhookWinEvent(hhook);
             Application.EnableVisualStyles();

@@ -53,7 +53,9 @@ namespace MtgoGame
             this.LabelPassword = new System.Windows.Forms.Label();
             this.LabelHost = new System.Windows.Forms.Label();
             this.LabelPort = new System.Windows.Forms.Label();
-            //this.SuspendLayout();
+            this.LabelEmailTo = new System.Windows.Forms.Label();
+            this.InputBoxEmailTo = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
             // 
             // InputBoxEmail
             // 
@@ -61,31 +63,31 @@ namespace MtgoGame
             this.InputBoxEmail.Name = "InputBoxEmail";
             this.InputBoxEmail.Size = new System.Drawing.Size(140, 20);
             this.InputBoxEmail.TabIndex = 0;
-            this.InputBoxEmail.Text = ConsoleApplication1.Properties.Settings.Default.Email;
+            this.InputBoxEmail.Text = global::ConsoleApplication1.Properties.Settings.Default.Email;
             // 
             // InputBoxPassword
             // 
-            this.InputBoxPassword.Location = new System.Drawing.Point(132, 58);
+            this.InputBoxPassword.Location = new System.Drawing.Point(132, 87);
             this.InputBoxPassword.Name = "InputBoxPassword";
             this.InputBoxPassword.Size = new System.Drawing.Size(140, 20);
             this.InputBoxPassword.TabIndex = 1;
-            this.InputBoxPassword.Text = ConsoleApplication1.Properties.Settings.Default.Password;
+            this.InputBoxPassword.Text = global::ConsoleApplication1.Properties.Settings.Default.Password;
             // 
             // InputBoxHost
             // 
-            this.InputBoxHost.Location = new System.Drawing.Point(132, 112);
+            this.InputBoxHost.Location = new System.Drawing.Point(132, 126);
             this.InputBoxHost.Name = "InputBoxHost";
             this.InputBoxHost.Size = new System.Drawing.Size(100, 20);
             this.InputBoxHost.TabIndex = 2;
-            this.InputBoxHost.Text = ConsoleApplication1.Properties.Settings.Default.Host;
+            this.InputBoxHost.Text = global::ConsoleApplication1.Properties.Settings.Default.Host;
             // 
             // InputBoxPort
             // 
-            this.InputBoxPort.Location = new System.Drawing.Point(132, 166);
+            this.InputBoxPort.Location = new System.Drawing.Point(132, 165);
             this.InputBoxPort.Name = "InputBoxPort";
             this.InputBoxPort.Size = new System.Drawing.Size(100, 20);
             this.InputBoxPort.TabIndex = 3;
-            this.InputBoxPort.Text = ConsoleApplication1.Properties.Settings.Default.Port;
+            this.InputBoxPort.Text = global::ConsoleApplication1.Properties.Settings.Default.Port;
             // 
             // ButtonSave
             // 
@@ -96,7 +98,6 @@ namespace MtgoGame
             this.ButtonSave.Text = "SAVE";
             this.ButtonSave.UseVisualStyleBackColor = true;
             this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
-
             // 
             // ButtonClose
             // 
@@ -113,23 +114,24 @@ namespace MtgoGame
             this.LabelEmail.AutoSize = true;
             this.LabelEmail.Location = new System.Drawing.Point(12, 15);
             this.LabelEmail.Name = "LabelEmail";
-            this.LabelEmail.Size = new System.Drawing.Size(73, 13);
+            this.LabelEmail.Size = new System.Drawing.Size(58, 13);
             this.LabelEmail.TabIndex = 6;
-            this.LabelEmail.Text = "Email Address";
+            this.LabelEmail.Text = "Email From";
             // 
             // LabelPassword
             // 
             this.LabelPassword.AutoSize = true;
-            this.LabelPassword.Location = new System.Drawing.Point(12, 61);
+            this.LabelPassword.Location = new System.Drawing.Point(12, 90);
             this.LabelPassword.Name = "LabelPassword";
             this.LabelPassword.Size = new System.Drawing.Size(53, 13);
             this.LabelPassword.TabIndex = 7;
             this.LabelPassword.Text = "Password";
+            this.LabelPassword.Click += new System.EventHandler(this.LabelPassword_Click);
             // 
             // LabelHost
             // 
             this.LabelHost.AutoSize = true;
-            this.LabelHost.Location = new System.Drawing.Point(12, 115);
+            this.LabelHost.Location = new System.Drawing.Point(12, 129);
             this.LabelHost.Name = "LabelHost";
             this.LabelHost.Size = new System.Drawing.Size(29, 13);
             this.LabelHost.TabIndex = 8;
@@ -138,17 +140,36 @@ namespace MtgoGame
             // LabelPort
             // 
             this.LabelPort.AutoSize = true;
-            this.LabelPort.Location = new System.Drawing.Point(12, 169);
+            this.LabelPort.Location = new System.Drawing.Point(12, 168);
             this.LabelPort.Name = "LabelPort";
             this.LabelPort.Size = new System.Drawing.Size(26, 13);
             this.LabelPort.TabIndex = 9;
             this.LabelPort.Text = "Port";
+            // 
+            // LabelEmailTo
+            // 
+            this.LabelEmailTo.AutoSize = true;
+            this.LabelEmailTo.Location = new System.Drawing.Point(12, 53);
+            this.LabelEmailTo.Name = "LabelEmailTo";
+            this.LabelEmailTo.Size = new System.Drawing.Size(48, 13);
+            this.LabelEmailTo.TabIndex = 10;
+            this.LabelEmailTo.Text = "Email To";
+            // 
+            // InputBoxEmailTo
+            // 
+            this.InputBoxEmailTo.Location = new System.Drawing.Point(132, 50);
+            this.InputBoxEmailTo.Name = "InputBoxEmailTo";
+            this.InputBoxEmailTo.Size = new System.Drawing.Size(140, 20);
+            this.InputBoxEmailTo.TabIndex = 11;
+            this.InputBoxEmailTo.Text = global::ConsoleApplication1.Properties.Settings.Default.EmailTo;
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.InputBoxEmailTo);
+            this.Controls.Add(this.LabelEmailTo);
             this.Controls.Add(this.LabelPort);
             this.Controls.Add(this.LabelHost);
             this.Controls.Add(this.LabelPassword);
@@ -159,10 +180,11 @@ namespace MtgoGame
             this.Controls.Add(this.InputBoxHost);
             this.Controls.Add(this.InputBoxPassword);
             this.Controls.Add(this.InputBoxEmail);
-            this.Name = "Connection Settings";
+            this.Name = "SettingsForm";
             this.Text = "Connection Settings";
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private void ButtonClose_Click(object sender, EventArgs e)
@@ -175,6 +197,7 @@ namespace MtgoGame
         {
 
             ConsoleApplication1.Properties.Settings.Default.Email = this.InputBoxEmail.Text;
+            ConsoleApplication1.Properties.Settings.Default.EmailTo = this.InputBoxEmailTo.Text;
             ConsoleApplication1.Properties.Settings.Default.Password = this.InputBoxPassword.Text;
             ConsoleApplication1.Properties.Settings.Default.Host = this.InputBoxHost.Text;
             ConsoleApplication1.Properties.Settings.Default.Port = this.InputBoxPort.Text;
@@ -192,5 +215,7 @@ namespace MtgoGame
         private System.Windows.Forms.Label LabelPassword;
         private System.Windows.Forms.Label LabelHost;
         private System.Windows.Forms.Label LabelPort;
+        private Label LabelEmailTo;
+        private TextBox InputBoxEmailTo;
     }   
 }

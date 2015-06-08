@@ -17,5 +17,9 @@ namespace MtgoGame
             this.InitializeComponent();
         }
 
+        private void LabelPassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

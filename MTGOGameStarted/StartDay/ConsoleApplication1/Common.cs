@@ -14,7 +14,8 @@ namespace MtgoGame
 
         public static void SendEmail(string subject, string body)
         {
-            MailMessage mail = new MailMessage(ConsoleApplication1.Properties.Settings.Default.Email, ConsoleApplication1.Properties.Settings.Default.Email);
+            // change below back if doesn't work, testing phone number sending
+            MailMessage mail = new MailMessage(ConsoleApplication1.Properties.Settings.Default.Email, ConsoleApplication1.Properties.Settings.Default.EmailTo);
             SmtpClient client = new SmtpClient();
             client.Port = Int32.Parse(ConsoleApplication1.Properties.Settings.Default.Port); // 587
             client.DeliveryMethod = SmtpDeliveryMethod.Network;

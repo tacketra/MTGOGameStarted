@@ -4,7 +4,7 @@ Purpose
 This is an application that is meant to be used with the Magic: The Gathering Online application. When you are
 playing in a tournament if your game starts and you don't respond withinin 10 minutes you are dropped from the 
 tournament. I frequently want to go do other activies besides sit at the computer waiting for my match to start but
-cannot due the 10 minute rule. This application should help with this problem by emailing you the second your game
+cannot due the 10 minute rule. This application should help with this problem by texting or emailing you the second your game
 starts.
 
 Setup
@@ -23,6 +23,7 @@ service that supports this but I chose to use gmail. See setup steps for gmail b
   -> Under "Outgoing Mail (SMTP) Server - Requires TLS" it should list the host (currently smtp.gmail.com) and the port
   -> grab the host and port from this section
   -> input your email, password as well as the host and port information you just grabbed into seetings and click save
+  -> you can change the Email to field to be your email address or your phone number. If you want to set up a phone number correctly just google and find the correct format to input your phone number, e.g. gmail to my verizon phone number looks like 5131231234@vtext.com
   
 Before using this application with an actual tournament you can test it out by joining a practice room game just
 to be safe. 
